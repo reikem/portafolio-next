@@ -6,7 +6,7 @@ export interface IProject{
     tags:string[];
     fullDescription:string;
     demoUrl:string;
-    githubUrk:string;
+    githubUrl:string;
     color:string;
     category:string;
 }
