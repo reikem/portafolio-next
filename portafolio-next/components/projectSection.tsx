@@ -1,3 +1,4 @@
+"use client"
 import { useLanguage } from "@/contexts/languageContext";
 import { IProject } from "@/core/interfaces";
 import { forwardRef } from "react";
