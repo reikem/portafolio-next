@@ -1,3 +1,4 @@
+"use client"
 import { useLanguage } from "@/contexts/languageContext";
 import { LanguageSelector } from "./languageSelector";
 
@@ -18,7 +19,7 @@ export function Navigation({currentSection,menuOpen,setMenuOpen,scrollToSection,
             <div className="flex items-center justify-between h-16">
               <button
                 onClick={onPortfolioClick}
-                className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
+                className="text-2xl font-bold bg-linear-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
               >
                 PORTFOLIO
               </button>
