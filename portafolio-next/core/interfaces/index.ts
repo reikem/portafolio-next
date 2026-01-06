@@ -24,3 +24,11 @@ export interface IEducation{
     description:string;
     type:string;
 }
+
+export interface IContactFormData{
+    name:string;
+    email:string;
+    subject:string;
+    message:string;
+
+}
