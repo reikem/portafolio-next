@@ -1,4 +1,4 @@
-import { IProject, ISkill } from "../interfaces";
+import { IEducation, IProject, ISkill } from "../interfaces";
 
 export const ProyectsData: IProject[] = [  {
     id: 1,
@@ -50,3 +50,56 @@ export const SkillsData: ISkill[] = [
     { name: "AWS", level: 75, category: "Cloud", icon: "☁️" },
     { name: "Docker", level: 82, category: "DevOps", icon: "🐳" },
 ];
+export const EducationData: IEducation[] = [
+  {
+    title: "Ingeniería en Sistemas Computacionales",
+    institution: "Universidad Tecnológica",
+    year: "2020 - 2024",
+    description:
+      "Especialización en desarrollo de software, inteligencia artificial y arquitectura de sistemas distribuidos.",
+    type: "degree",
+  },
+  {
+    title: "Certificación AWS Solutions Architect",
+    institution: "Amazon Web Services",
+    year: "2023",
+    description: "Certificación profesional en diseño y despliegue de sistemas escalables en AWS.",
+    type: "certification",
+  },
+  {
+    title: "Full Stack Web Development",
+    institution: "FreeCodeCamp",
+    year: "2022",
+    description: "Programa intensivo de desarrollo web full-stack con proyectos reales.",
+    type: "course",
+  },
+  {
+    title: "Machine Learning Specialization",
+    institution: "Stanford University (Coursera)",
+    year: "2023",
+    description: "Especialización en algoritmos de machine learning y deep learning.",
+    type: "course",
+  },
+]
+export const AssassinRiddlesData = [
+  {
+    question: "¿Cuál es el primer mandamiento del Credo de los Asesinos?",
+    answer: "nada es verdad",
+    altair:
+      "La sabiduría de los antiguos nos guía, hermano. Has demostrado que comprendes los fundamentos de nuestra orden.",
+    ezio: "Bene! Tu conocimiento del Credo honra a nuestros ancestros. La verdad absoluta es una ilusión que ciega a los débiles.",
+  },
+  {
+    question: "¿Qué significa 'Requiescat in pace' y quién lo dice?",
+    answer: "descansa en paz",
+    altair: "Las palabras de respeto por los caídos. Incluso nuestros enemigos merecen encontrar la paz en la muerte.",
+    ezio: "Esatto! Estas palabras honran tanto al caído como al que las pronuncia. La muerte no es el final, sino una transición.",
+  },
+  {
+    question: "¿Cuál es el nombre de la orden enemiga de los Asesinos?",
+    answer: "templarios",
+    altair:
+      "Conoces bien a nuestros eternos adversarios. Su búsqueda del orden absoluto es la antítesis de nuestra libertad.",
+    ezio: "Sí, los Templarios... Aquellos que buscan controlar en lugar de liberar. Tu conocimiento te servirá bien, assassino.",
+  },
+]
