@@ -6,7 +6,11 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, subject, message } = await request.json()
+    const body = await request.json()
+    const { name, email, subject, message } = body
+    
+    console.log("1. Datos recibidos en el server:", body)
+    console.log("2. API Key configurada:", process.env.RESEND_API_KEY ? "SÍ" : "NO")
 
     const { data, error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
@@ -16,11 +20,15 @@ export async function POST(request: NextRequest) {
     })
 
     if (error) {
+      console.error("❌ ERROR DE RESEND:", error)
       return NextResponse.json({ error }, { status: 400 })
     }
 
+    console.log("✅ CORREO ENVIADO EXITOSAMENTE:", data)
     return NextResponse.json({ data })
+
   } catch (error) {
-    return NextResponse.json({ error }, { status: 500 })
+    console.error("💥 ERROR CRÍTICO EN LA RUTA API:", error)
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
   }
 }
