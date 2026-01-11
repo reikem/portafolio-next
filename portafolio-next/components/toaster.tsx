@@ -1,7 +1,7 @@
 "use client"
 
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { X, CheckCircle, XCircle, AlertCircle, Info } from "lucide-react"
 import { useToast } from "@/lib/useToast"
 
@@ -16,7 +16,6 @@ export function Toaster() {
     </div>
   )
 }
-
 function ToastItem({
   toast,
   onDismiss,
@@ -24,11 +23,8 @@ function ToastItem({
   toast: ReturnType<typeof useToast>["toasts"][0]
   onDismiss: () => void
 }) {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
+  // ✅ visible desde el primer render
+  const [isVisible, setIsVisible] = useState(true)
 
   const handleDismiss = () => {
     setIsVisible(false)
@@ -59,11 +55,23 @@ function ToastItem({
       `}
     >
       <div className="flex items-start gap-3">
-        <div className="flex-shrink-0">{iconMap[toast.variant || "default"]}</div>
-        <div className="flex-1 min-w-0">
-          {toast.title && <p className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{toast.title}</p>}
-          {toast.description && <p className="text-sm text-gray-600 dark:text-gray-400">{toast.description}</p>}
+        <div className="flex-shrink-0">
+          {iconMap[toast.variant || "default"]}
         </div>
+
+        <div className="flex-1 min-w-0">
+          {toast.title && (
+            <p className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+              {toast.title}
+            </p>
+          )}
+          {toast.description && (
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              {toast.description}
+            </p>
+          )}
+        </div>
+
         <button
           onClick={handleDismiss}
           className="flex-shrink-0 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"

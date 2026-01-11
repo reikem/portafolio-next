@@ -80,11 +80,7 @@ export default function Portfolio() {
     setShowResult(true)
 
     if (correct && assassinModalRef.current) {
-      // Play sound only if correct and audio element exists
-      // You'll need to add an audio element for the sound effect, perhaps within AssassinModal
-      // For now, this part is commented out as the audio element is not directly available here.
-      // If you add an <audio> tag with a ref, you can play it here.
-      // eagleSoundRef.current.play().catch(console.error)
+
     }
   }
 
