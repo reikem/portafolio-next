@@ -1,18 +1,22 @@
 "use client"
-import { useLanguage } from "@/contexts/languageContext";
-import { IProject } from "@/core/interfaces";
-import { forwardRef } from "react";
+
+import Image from "next/image"
+import { useLanguage } from "@/contexts/languageContext"
+import { IProject } from "@/core/interfaces"
+import { forwardRef } from "react"
 
 interface ProjectModalProps {
-    project: IProject|null;
-    onClose: () => void;
-    contentRef: React.RefObject<HTMLDivElement>;
+  project: IProject | null
+  onClose: () => void
+  contentRef: React.RefObject<HTMLDivElement>
 }
-export const ProjectModal = forwardRef<HTMLDivElement, ProjectModalProps>(({ project, onClose, contentRef }, ref) => {
+
+export const ProjectModal = forwardRef<HTMLDivElement, ProjectModalProps>(
+  ({ project, onClose, contentRef }, ref) => {
     const { t } = useLanguage()
-  
+
     if (!project) return null
-  
+
     return (
       <div
         ref={ref}
@@ -26,17 +30,38 @@ export const ProjectModal = forwardRef<HTMLDivElement, ProjectModalProps>(({ pro
           onClick={(e) => e.stopPropagation()}
         >
           <div className="modal-content p-8">
-            <div className="modal-image relative h-64 md:h-96 rounded-xl overflow-hidden mb-8">
-              <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
-              <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-50`} />
+            {/* IMAGE */}
+            <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8">
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 800px"
+                className="object-cover"
+                priority
+              />
+              <div
+                className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-50`}
+              />
             </div>
-  
-            <p className="text-sm text-gray-400 uppercase tracking-wider mb-2">{project.category}</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{project.title}</h2>
-            <p className="text-xl text-gray-300 mb-6">{project.fullDescription}</p>
-  
+
+            <p className="text-sm text-gray-400 uppercase tracking-wider mb-2">
+              {project.category}
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              {project.title}
+            </h2>
+
+            <p className="text-xl text-gray-300 mb-6">
+              {project.fullDescription}
+            </p>
+
+            {/* TAGS */}
             <div className="mb-4">
-              <h3 className="text-lg font-semibold text-white mb-3">{t.technologies}</h3>
+              <h3 className="text-lg font-semibold text-white mb-3">
+                {t.technologies}
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, i) => (
                   <span
@@ -48,7 +73,8 @@ export const ProjectModal = forwardRef<HTMLDivElement, ProjectModalProps>(({ pro
                 ))}
               </div>
             </div>
-  
+
+            {/* ACTIONS */}
             <div className="flex flex-wrap gap-4 mt-8">
               <a
                 href={project.demoUrl}
@@ -58,6 +84,7 @@ export const ProjectModal = forwardRef<HTMLDivElement, ProjectModalProps>(({ pro
               >
                 View Live Demo →
               </a>
+
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -66,6 +93,7 @@ export const ProjectModal = forwardRef<HTMLDivElement, ProjectModalProps>(({ pro
               >
                 View on GitHub
               </a>
+
               <button
                 onClick={onClose}
                 className="px-6 py-3 bg-white/5 rounded-lg text-white font-semibold hover:bg-white/10 transition-colors border border-white/20"
@@ -77,6 +105,7 @@ export const ProjectModal = forwardRef<HTMLDivElement, ProjectModalProps>(({ pro
         </div>
       </div>
     )
-  })
-  
-  ProjectModal.displayName = "ProjectModal"
+  }
+)
+
+ProjectModal.displayName = "ProjectModal"
