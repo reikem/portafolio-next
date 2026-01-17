@@ -10,8 +10,8 @@ export const translations = {
       contact: "Contacto",
   
       // Hero Section
-      heroTitle1: "Creativo",
-      heroTitle2: "Desarrollador",
+      heroTitle1: "Jimmy Meneses",
+      heroTitle2: " Creativo Desarrollador",
       heroSubtitle: "Creando experiencias digitales inmersivas con tecnología de vanguardia",
       viewWork: "Ver Mi Trabajo",
   
@@ -65,8 +65,8 @@ export const translations = {
       contact: "Contact",
   
       // Hero Section
-      heroTitle1: "Creative",
-      heroTitle2: "Developer",
+      heroTitle1: "Jimmy Meneses",
+      heroTitle2: " Creative Developer",
       heroSubtitle: "Crafting immersive digital experiences with cutting-edge technology",
       viewWork: "View My Work",
   
@@ -120,8 +120,8 @@ export const translations = {
       contact: "お問い合わせ",
   
       // Hero Section
-      heroTitle1: "クリエイティブ",
-      heroTitle2: "開発者",
+      heroTitle1: "ジミー・メネセス",
+      heroTitle2: " クリエイティブ 開発者",
       heroSubtitle: "最先端技術で没入型デジタル体験を創造",
       viewWork: "作品を見る",
   
@@ -175,8 +175,8 @@ export const translations = {
       contact: "Kontakt",
   
       // Hero Section
-      heroTitle1: "Kreativer",
-      heroTitle2: "Entwickler",
+      heroTitle1: "Jimmy Meneses",
+      heroTitle2: "Kreativer Entwickler",
       heroSubtitle: "Erschaffung immersiver digitaler Erlebnisse mit modernster Technologie",
       viewWork: "Meine Arbeit ansehen",
   
@@ -230,8 +230,8 @@ export const translations = {
       contact: "Contatti",
   
       // Hero Section
-      heroTitle1: "Creativo",
-      heroTitle2: "Sviluppatore",
+      heroTitle1: "Jimmy Meneses",
+      heroTitle2: "Creativo Sviluppatore",
       heroSubtitle: "Creazione di esperienze digitali immersive con tecnologia all'avanguardia",
       viewWork: "Vedi il Mio Lavoro",
   
@@ -286,8 +286,8 @@ export const translations = {
   
       // Hero Section
       heroTitle1: "创意",
-      heroTitle2: "开发者",
-      heroSubtitle: "用尖端技术打造沉浸式数字体验",
+      heroTitle2: "吉米·梅內塞斯",
+      heroSubtitle: "开发者 用尖端技术打造沉浸式数字体验",
       viewWork: "查看我的作品",
   
       // About Section

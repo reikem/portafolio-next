@@ -2,14 +2,14 @@ import { IEducation, IProject, ISkill } from "../interfaces";
 
 export const ProyectsData: IProject[] = [  {
     id: 1,
-    title: "E-commerce Platform",
-    description: "Next-generation shopping experience with AI recommendations",
-    image: "/placeholder.svg?height=800&width=1200&text=E-commerce+Platform",
-    tags: ["React", "Node.js", "AI", "Stripe"],
+    title: "IFIS – Internet Flight Information Service (Rediseño NO OFICIAL)",
+    description: "Este proyecto NO es la página oficial de IFIS-DGAC Chile. Es un rediseño personal con fines educativos.",
+    image: "https://github.com/reikem/ifis-redesign/raw/main/src/assets/proyecto.webp",
+    tags: ["React", "Vite.js", "Tailwind CSS", "shadcn/ui"],
     fullDescription:
-      "Revolutionary e-commerce platform featuring AI-powered recommendations, real-time inventory management, and seamless payment processing.",
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/ecommerce",
+      "Es una recreación/prototipo educativo para practicar Vite, React, Tailwind CSS y shadcn/ui. No consume ni expone datos reales.",
+    demoUrl: "https://reikem.github.io/ifis-redesign/",
+    githubUrl: "https://github.com/reikem/ifis-redesign",
     color: "from-purple-600 via-pink-600 to-red-600",
     category: "Web Application",
   },
